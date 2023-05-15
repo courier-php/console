@@ -1,0 +1,44 @@
+{
+  "name": "courier/console",
+  "description": "Console commands to manage Courier.",
+  "keywords": ["console", "command-line interface"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Flavio Heleno",
+      "email": "flaviohbatista@gmail.com",
+      "homepage": "https://flavioheleno.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Courier\\Console\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Courier\\Test\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "sandersander/composer-link": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2",
+    "ext-pcntl": "*",
+    "courier/contracts": "self.version",
+    "courier/courier": "self.version",
+    "symfony/console": "^6.2"
+  },
+  "require-dev": {
+    "sandersander/composer-link": "^0.3"
+  }
+}
