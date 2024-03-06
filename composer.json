@@ -1,6 +1,6 @@
 {
   "name": "courier/console",
-  "description": "Console commands to manage Courier.",
+  "description": "Command-line interface to manage Courier.",
   "keywords": ["console", "command-line interface"],
   "type": "library",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "ext-pcntl": "*",
     "courier/contracts": "self.version",
     "courier/courier": "self.version",
-    "symfony/console": "^6.2"
+    "symfony/console": "^6.4 || ^7.0"
   },
   "require-dev": {
     "sandersander/composer-link": "^0.3"
