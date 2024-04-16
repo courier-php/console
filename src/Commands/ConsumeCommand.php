@@ -328,8 +328,10 @@ final class ConsumeCommand extends Command implements SignalableCommandInterface
     return [SIGINT, SIGTERM];
   }
 
-  public function handleSignal(int $signal): void {
+  public function handleSignal(int $signal, int|false $previousExitCode = 0): int|false {
     $this->manualStop = true;
     $this->collector->stop();
+
+    return false;
   }
 }
